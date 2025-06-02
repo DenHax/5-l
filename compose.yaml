@@ -1,0 +1,8 @@
+services:
+  shiny-app:
+    build: .
+    ports:
+      - "3838:3838"
+    volumes:
+      - ./app.R:/srv/shiny-server/app.R
+    restart: unless-stopped
